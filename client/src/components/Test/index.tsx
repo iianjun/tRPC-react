@@ -1,5 +1,5 @@
 import React from "react";
-import { trpc } from "./utils/trpc";
+import { trpc } from "../../utils/trpc";
 
 const Test = () => {
   const hello = trpc.sayHi.useQuery();

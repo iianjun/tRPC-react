@@ -1,28 +1,20 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-import { httpBatchLink } from "@trpc/client";
-import { useState } from "react";
-import { trpc } from "./utils/trpc";
-import Test from "./Test";
+import Layout from "./components/Layout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Test2 from "./components/Test2";
+import Test from "./components/Test";
+import AboutUs from "./components/AboutUs";
 
 function App() {
-  const [queryClient] = useState(() => new QueryClient());
-  const [trpcClient] = useState(() =>
-    trpc.createClient({
-      links: [
-        httpBatchLink({
-          url: "http://localhost:3000/trpc",
-        }),
-      ],
-    })
-  );
-
   return (
-    <trpc.Provider client={trpcClient} queryClient={queryClient}>
-      <QueryClientProvider client={queryClient}>
-        <Test />
-      </QueryClientProvider>
-    </trpc.Provider>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/test2" element={<Test2 />} />
+          <Route path="/test" element={<Test />} />
+          <Route path="aboutus" element={<AboutUs />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
