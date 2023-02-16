@@ -9,15 +9,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@tanstack/react-query": "^4.24.4",
     "@trpc/client": "^10.10.0",
     "@trpc/react-query": "^10.10.0",
     "@trpc/server": "^10.10.0",
+    "antd": "^5.2.1",
+    "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
+    "react-loading-skeleton": "^3.1.1",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.8.1",
-    "sass": "^1.58.1"
+    "sass": "^1.58.1",
+    "unsplash-js": "^7.0.15"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
