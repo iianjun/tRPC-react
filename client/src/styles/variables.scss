@@ -1,5 +1,8 @@
 $primary: #407bff;
 $secondary: #0341cf;
 $secondary-a: #d9d9d9;
+$gray-bg: #f1f1f133;
 
 $transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bg: 0.2s background-color cubic-bezier(0.4, 0, 0.2, 1);
+$transition-function: cubic-bezier(0.4, 0, 0.2, 1);

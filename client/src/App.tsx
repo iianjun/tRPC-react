@@ -1,17 +1,13 @@
 import Layout from "./components/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Test2 from "./components/Test2";
-import Test from "./components/Test";
-import AboutUs from "./components/AboutUs";
+import Main from "./components/Main";
 
 function App() {
   return (
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/test2" element={<Test2 />} />
-          <Route path="/test" element={<Test />} />
-          <Route path="aboutus" element={<AboutUs />} />
+          <Route path="/" element={<Main />} />
         </Routes>
       </Layout>
     </BrowserRouter>

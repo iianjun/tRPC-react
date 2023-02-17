@@ -1,0 +1,41 @@
+@import "../variables.scss";
+.wrapper {
+  width: 70px;
+  height: 70px;
+  color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    .folder {
+      width: 65px;
+      height: 65px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: $transition-bg;
+      &:hover {
+        background-color: #f1f1f133;
+        border: 1px solid #c9c9c9;
+      }
+    }
+    .title {
+      max-width: 100px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}

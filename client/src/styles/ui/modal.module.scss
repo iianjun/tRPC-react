@@ -1,0 +1,62 @@
+@import "../variables.scss";
+
+.modal {
+  .header {
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .btn-wrapper {
+        display: flex;
+        gap: 5px;
+        width: fit-content;
+        &:hover {
+          svg {
+            visibility: visible !important;
+          }
+        }
+        & > span {
+          cursor: pointer;
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            visibility: hidden;
+          }
+        }
+        span:nth-child(1) {
+          background-color: #ff5f57;
+          svg {
+            width: 13px;
+            height: 8px;
+          }
+        }
+        span:nth-child(2) {
+          background-color: #febc2e;
+          svg {
+            width: 13px;
+            height: 8px;
+          }
+        }
+        span:nth-child(3) {
+          background-color: #28c840;
+          svg {
+            width: 13px;
+            height: 7px;
+          }
+        }
+      }
+    }
+  }
+
+  &.expand {
+    width: 100vw !important;
+
+    :global(.ant-modal-body) {
+      height: 100vh;
+    }
+  }
+}
